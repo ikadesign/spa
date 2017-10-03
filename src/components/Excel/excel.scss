@@ -1,0 +1,29 @@
+
+.excel-title {
+  padding: 0 0 20px;
+  margin: 0 0 10px;
+}
+.excel-table {
+  border-collapse: collapse;
+  width: 100%;
+  thead {
+    background: #ddd;
+    tr {
+      border-bottom: 2px solid #ccc;
+    }
+    th {
+      text-align: left;
+      font-size: 15px;
+      padding: 10px;
+    }
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid #eee;
+    }
+    td {
+      font-size: 12px;
+      padding: 10px;
+    }
+  }
+}

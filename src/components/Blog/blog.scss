@@ -1,0 +1,388 @@
+.blog-page {
+  margin: 0 0 80px;
+  overflow: hidden;
+  &.no-manage {
+    .blog-header {
+      display: none;
+    }
+    .blog-item {
+      .edit-box {
+        display: none;
+      }
+    }
+    .category-item {
+      .edit-box {
+        display: none;
+      }
+      &.category-add {
+        display: none;
+      }
+    }
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .error-block {
+    margin: 0 0 20px;
+    &.hide {
+      display: none;
+    }
+  }
+  .blog-header {
+    margin: 0 0 20px;
+    .btn-box {
+      margin: 0 0 20px;
+      overflow: hidden;
+      .btn-add {
+        float: left;
+        text-decoration: none;
+        border: 1px solid #ddd;
+        background: #fff;
+        border-radius: 3px;
+        padding: 7px 10px;
+        font-size: 15px;
+        font-weight: bold;
+        outline: none;
+        cursor: pointer;
+        &:hover {
+          background: rgba(0,0,0,0.01);
+        }
+      }
+    }
+    .addblog-box {
+      &.hide {
+        display: none;
+      }
+      h4 {
+        margin: 0 0 10px;
+      }
+      .input-title {
+        border-radius: 3px;
+        padding: 5px 10px;
+        font-size: 15px;
+        border: 1px solid #ddd;
+        margin: 0 0 20px;
+        width: 100%;
+        outline: none;
+      }
+      .input-select {
+        border-radius: 3px;
+        padding: 10px 5px;
+        font-size: 15px;
+        border: 1px solid #ddd;
+        margin: 0 0 20px;
+        width: 100%;
+        outline: none;
+        option {
+          padding: 2px 0;
+        }
+      }
+      .input-content {
+        border-radius: 3px;
+        padding: 5px 10px;
+        font-size: 15px;
+        border: 1px solid #ddd;
+        margin: 0 0 20px;
+        resize: none;
+        display: block;
+        width: 100%;
+        outline: none;
+      }
+      button {
+        text-decoration: none;
+        border: 1px solid #ddd;
+        background: #fff;
+        border-radius: 3px;
+        padding: 7px 10px;
+        font-size: 15px;
+        font-weight: bold;
+        outline: none;
+      }
+    }
+  }
+  .side-bar {
+    float: right;
+    width: 180px;
+    margin: 0 0 30px;
+    border-radius: 3px;
+    .edit-blog-toggle {
+      margin: 0 0 20px;
+      overflow: hidden;
+      button {
+        text-decoration: none;
+        border: 1px solid #ddd;
+        background: #fff;
+        border-radius: 3px;
+        padding: 7px 10px;
+        font-size: 15px;
+        font-weight: bold;
+        outline: none;
+        width: 100%;
+        cursor: pointer;
+        &:hover {
+          background: rgba(0,0,0,0.01);
+        }
+      }
+      .fa {
+        margin: 0 0 0 5px;
+      }
+    }
+    .blog-search {
+      margin: 0 0 20px;
+      .input-search {
+        border: 1px solid #ddd;
+        background: #fff;
+        border-radius: 3px;
+        padding: 7px 10px;
+        display: inline-block;
+        outline: none;
+        width: 100%;
+      }
+    }
+    h3 {
+      font-size: 15px;
+      margin: 0 0 10px;
+      padding: 0 0 0 4px;
+    }
+    .category-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .category-item {
+      overflow: hidden;
+      margin: 0 0 10px;
+      padding: 10px 15px 0;
+      background: #eee;
+      border-radius: 20px;
+      font-size: 12px;
+      &.category-add {
+        background: #fff;
+      }
+      span {
+        float: left;
+        margin: 0 0 10px;
+      }
+      .edit-box {
+        float: right; 
+        margin: 0 0 10px;
+        button {
+          margin: 0 0 0 5px;
+          background: none;
+          border: none;
+          padding: 0 1px;
+        }
+      }
+      .edit-input {
+        clear: both;
+        margin: 0 0 10px;
+        &.hide {
+          display: none;
+        }
+        input {
+          border: 1px solid #ddd;
+          background: #fff;
+          border-radius: 3px;
+          padding: 2px 10px;
+          display: inline-block;
+          outline: none;
+          width: 100%;
+        }
+      }
+    }
+    .manage-box {
+      &.hide {
+        display: none;
+      }
+    }
+  }
+  .blog-list {
+    float: left;
+    width: calc(100% - 200px);
+    .blog-item {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin: 0 0 30px;
+      border-radius: 3px;
+      transition: 0.3s;
+      text-shadow: 0 0 0 #000;
+      background: #fff;
+    }
+    .title-box {
+      font-size: 24px;
+      margin: 0 0 20px;
+      overflow: hidden;
+      &:hover a span {
+        color: #2885FF;
+      }
+      span {
+        float: left;
+      }
+      .edit-box {
+        float: right;
+        button {
+          margin: 0 0 0 10px;
+          border: 1px solid #ddd;
+          padding: 5px 0;
+          background: none;
+          text-align: center;
+          border-radius: 3px;
+          width: 30px;
+          cursor: pointer;
+          background: #fff;
+          outline: none;
+        }
+      }
+    }
+    .info-box {
+      font-size: 12px;
+      color: #888;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      padding: 10px 5px;
+      margin: 0 0 20px;
+      overflow: hidden;
+      .fa {
+        margin: 0 5px 0 0;
+      }
+      .date-box {
+        float: left;
+      }
+      .category-box {
+        float: right;
+      }
+    }
+    .content-box {
+      font-size: 18px;
+      line-height: 1.5;
+      max-height: 6em;
+      overflow: hidden;
+    }
+    .update-box {
+      background: rgba(0,0,0,0.05);
+      padding: 30px;
+      margin: 30px 0 0;
+      &.hide {
+        display: none;
+      }
+      h2 {
+        margin: 0 0 20px;
+      }
+      h4 {
+        margin: 0 0 10px;
+      }
+      .input-title {
+        border-radius: 3px;
+        padding: 5px 10px;
+        font-size: 15px;
+        border: 1px solid #ddd;
+        margin: 0 0 20px;
+        width: 100%;
+      }
+      .input-select {
+        border-radius: 3px;
+        padding: 10px 5px;
+        font-size: 15px;
+        border: 1px solid #ddd;
+        margin: 0 0 20px;
+        width: 100%;
+        outline: none;
+        option {
+          padding: 2px 0;
+        }
+      }
+      .input-content {
+        border-radius: 3px;
+        padding: 5px 10px;
+        font-size: 15px;
+        border: 1px solid #ddd;
+        margin: 0 0 20px;
+        resize: none;
+        display: block;
+        width: 100%;
+      }
+      button {
+        border: 1px solid #ddd;
+        padding: 5px 10px;
+        background: none;
+        text-align: center;
+        border-radius: 3px;
+        cursor: pointer;
+        background: #fff;
+        outline: none;
+      }
+    }
+  }
+  .error-text {
+    color: #ce371c;
+  }
+}
+.blog-single-page {
+
+  .blog-title {
+    font-size: 24px;
+    margin: 0 0 20px;
+    overflow: hidden;
+    span {
+      float: left;
+    }
+    .edit-box {
+      float: right;
+      button {
+        margin: 0 0 0 10px;
+        border: 1px solid #ddd;
+        padding: 5px 0;
+        background: none;
+        text-align: center;
+        border-radius: 3px;
+        width: 30px;
+        cursor: pointer;
+        background: #fff;
+        outline: none;
+      }
+    }
+  }
+  .info-box {
+    font-size: 12px;
+    color: #888;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 10px 5px;
+    margin: 0 0 20px;
+    overflow: hidden;
+    .fa {
+      margin: 0 5px 0 0;
+    }
+    .date-box {
+      float: left;
+    }
+    .category-box {
+      float: right;
+    }
+  }
+  .content-box {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .blog-page {
+    .blog-header {
+      .addblog-box {
+        .input-title {
+          width: 100%;
+        }
+        .input-content {
+          width: 100%;
+        }
+      }
+    }
+    .side-bar{
+      float: none;
+      width: 100%;
+    }
+    .blog-list {
+      float: none;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.todo-container {
+  display: flex;
+  margin: 0 0 80px;
+}
+.todo-title {
+  padding: 0 0 20px;
+  margin: 0 0 10px;
+}
+.todo-input {
+  flex: 1;
+  padding: 0 30px 0 0;
+  box-sizing: border-box;
+  .input-text {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin: 0 0 10px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+  }
+  .input-btn {
+    border: 0;
+    background: #eee;
+    border-radius: 3px;
+    width: 100%;
+    padding: 10px 0;
+    &:active {
+      box-shadow: 0 0 10px #ccc inset;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.todo-list {
+  flex: 4;
+  .item-list {
+    background: #eee;
+    border-radius: 3px;
+    padding: 30px;
+    margin: 0;
+    list-style: none;
+    .list-item {
+      background: rgba(0,0,0,0.05);
+      margin: 0 0 10px;
+      border-radius: 3px;
+      padding: 5px 5px 5px 15px;
+      position: relative;
+      overflow: hidden;
+      &.yes {
+        .input-btn {
+          &.btn-completed {
+            background: #3B9E2E;
+            .fa {
+              color: #fff;
+            }
+          }
+        }
+      }
+      .input-btn {
+        border: 0;
+        background: #fff;
+        border-radius: 3px;
+        padding: 5px 10px;
+        &:active {
+          box-shadow: 0 0 10px rgba(0,0,0,0.1) inset;
+        }
+        &:focus {
+          outline: none;
+        }
+        &.btn-del {
+          float: right;
+        }
+        &.btn-completed {
+          float: right;
+          margin: 0 5px 0 0;
+          .fa {            
+            color: #ddd;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .todo-container {
+    display: block;
+    .todo-input {
+      padding: 0;
+      margin: 0 0 40px;
+    }
+  }
+}
